@@ -1,8 +1,13 @@
 import React from 'react';
 
 const Alert = ({alert}) => {
-    return(
-        <div className={`alert alert-${alert.type || 'warning'} alert-dismissible`} >
+
+    if (!alert) {
+        return null
+    }
+
+    return (
+        <div className={`alert alert-${alert.type || 'warning'} alert-dismissible`}>
             <strong>Внимание!</strong>
             {alert.text}
             <button type="button" className="close" aria-label="Close">
@@ -10,6 +15,6 @@ const Alert = ({alert}) => {
             </button>
         </div>
     )
-}
+};
 
 export default Alert;
