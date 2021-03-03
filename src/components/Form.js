@@ -8,7 +8,13 @@ const Form = () => {
     const submitHandler = (e) => {
         e.preventDefault()
 
-        alert.show(value, 'success')
+        if (value.trim()) {
+            //...
+            alert.show('Заметка была создана', 'success')
+            setValue('')
+        } else {
+            alert.show('Введите название заметки')
+        }
     }
 
     return (
@@ -16,7 +22,7 @@ const Form = () => {
             <div className="form-group">
                 <input type="text"
                        className="form-control"
-                       placeholder="Внесите новую запись"
+                       placeholder="Введите название заметки"
                        value={value}
                        onChange={e => setValue(e.target.value)}/>
             </div>
