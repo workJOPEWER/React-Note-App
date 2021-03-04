@@ -7,7 +7,7 @@ Error: File to import not found or unreadable: ~bootstrap/scss/bootstrap.
 3: body {
 4:   margin: 0;
 5:   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-6:     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+6:   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
 
 Backtrace:
 index.scss:1
@@ -51,4 +51,4 @@ index.scss:1
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ~bootstrap/scss/bootstrap.\A         on line 1 of index.scss\A \A 1: @import \"~bootstrap/scss/bootstrap\";\A 2: \A 3: body {\A 4:   margin: 0;\A 5:   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\A 6:     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',"; }
+  content: "Error: File to import not found or unreadable: ~bootstrap/scss/bootstrap.\A         on line 1 of index.scss\A \A 1: @import \"~bootstrap/scss/bootstrap\";\A 2: \A 3: body {\A 4:   margin: 0;\A 5:   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',\A 6:   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',"; }
