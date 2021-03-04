@@ -5,15 +5,15 @@ const NavBar = () => {
     return (
         <nav className="navbar navbar-dark navbar-expand-lg bg-dark">
             <div className="navbar-brand">
-                Note App
+                БЛОКНОТ.А
             </div>
 
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <NavLink to="/" className="nav-link" aria-current="page">Главная</NavLink>
+                    <NavLink to="/" className="nav-link">Блокнот</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/about" className="nav-link" aria-current="page">Инфо</NavLink>
+                    <NavLink to="/about" className="nav-link">Инфо</NavLink>
                 </li>
             </ul>
         </nav>

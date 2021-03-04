@@ -1,19 +1,28 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import Form from "../components/Form";
 import Notes from "../components/Notes";
+import Loader from "../components/Loader";
+import {FirebaseContext} from "../context/firebase/firebaseContext";
 
 export const Home = () => {
+    const {loading, notes, fetchNotes} = useContext(FirebaseContext)
 
-    const notes = new Array(3)
-        .fill('')
-        .map((_, i) => ({id: i, title: `Note ${i + 1}`}));
+    useEffect(() => {
+        fetchNotes()
+    },[])
+
     return (
         <div className='wrapper'>
+             <h1 style={{marginBottom: "50px"}}>Список заметок :</h1>
             <Form/>
 
             <hr/>
+            {
+                loading
+                    ? <Loader/>
+                    : <Notes notes={notes}/>
+            }
 
-            <Notes notes={notes}/>
         </div>
     )
 };

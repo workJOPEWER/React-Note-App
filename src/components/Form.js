@@ -2,20 +2,20 @@ import React, {useState, useContext} from 'react';
 import {AlertContext} from "../context/alert/alertContext";
 
 const Form = () => {
-    const [value, setValue] = useState('')
-    const alert = useContext((AlertContext))
+    const [value, setValue] = useState('');
+    const alert = useContext((AlertContext));
 
     const submitHandler = (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
         if (value.trim()) {
             //...
-            alert.show('Заметка была создана', 'success')
+            alert.show('Заметка была создана', 'success');
             setValue('')
         } else {
             alert.show('Введите название заметки')
         }
-    }
+    };
 
     return (
         <form onSubmit={submitHandler}>
@@ -28,6 +28,6 @@ const Form = () => {
             </div>
         </form>
     )
-}
+};
 
 export default Form;

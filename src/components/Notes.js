@@ -14,7 +14,7 @@ const Notes = ({notes}) => {
                         <small>{new Date().toLocaleDateString()}</small>
                     </div>
 
-                    <button type="button" className="btn btn-outline-danger btn-sm">
+                    <button type="button" className="btn btn-outline-secondary btn-sm">
                         &times;
                     </button>
                 </li>

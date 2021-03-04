@@ -11,7 +11,7 @@ const {alert, hide} = useContext(AlertContext)
     return (
         <div className={`alert alert-${alert.type || 'warning'} alert-dismissible`}>
             <strong>Внимание!</strong>
-            {alert.text}
+            &nbsp;{alert.text}
             <button onClick={hide} type="button" className="close" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>

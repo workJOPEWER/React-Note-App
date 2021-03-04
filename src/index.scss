@@ -18,7 +18,7 @@ code {
   margin-top: 50px;
 }
 
-.note{
+.note, .navbar{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,4 +26,11 @@ code {
   strong{
     margin-right: 1rem;
   }
+}
+
+.navbar-brand{
+  margin-left: 2.5rem;
+}
+.navbar-nav{
+  margin-right: 2.5rem;
 }
