@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Notes = ({notes}) => {
+const Notes = ({notes, onRemove}) => {
     return (
         <ul className="list-group">
             {notes.map(note => (
@@ -14,7 +14,9 @@ const Notes = ({notes}) => {
                         <small>{note.date}</small>
                     </div>
 
-                    <button type="button" className="btn btn-outline-secondary btn-sm">
+                    <button type="button"
+                            className="btn btn-outline-secondary btn-sm"
+                            onClick={() => onRemove(note.id)}>
                         &times;
                     </button>
                 </li>
